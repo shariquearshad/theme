@@ -1,0 +1,118 @@
+ <div>
+     <div class="title"> Choose your theme</div> 
+
+  <div class="colorContainer"> 
+         
+        <div class=" myDiv "   *ngFor= "let theme of themes;let i=index">
+            <div class="container " (click)="changeTheme(i)" [ngStyle]="{'border-color':i===active_index?'black !important':''}">
+                  
+                        <div class="row">
+                            <div class="sm-3 tile first" [ngStyle]="{'background-color':theme.colorConfig.active_color}"></div>
+                            <div class="sm-3 tile" [ngStyle]="{'background-color':theme.colorConfig.background_color}"></div>
+                            <div class="sm-3 tile" [ngStyle]="{'background-color':theme.colorConfig.panel_color}"></div>
+                            <div class="sm-3 tile" [ngStyle]="{'background-color':theme.colorConfig.text_color}"></div>
+                            <div class="sm-3 tile last" [ngStyle]="{'background-color':theme.colorConfig.primary_color}"></div>
+                            
+
+                        </div>
+                        <div class="name_container" >
+                            
+                            
+                            {{theme.name}}
+                        </div>
+                        
+                        
+                    
+            </div>
+            <div class="row"  [style.display]="(i==1)||(i==0)?'none !important':''">
+              <div class="hide"  (click)="open(content,theme.id)">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="darkgrey" class="bi bi-pencil-square" viewBox="0 0 16 16" margin-right="5px">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                      </svg>
+                    </div>   
+              <div class="hide" (click)="deleteItem(theme.id)">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="darkgrey" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                      </svg>
+                    </div>
+                 
+            </div>
+            
+          </div>
+  </div>
+    
+    <button   type="button " class="btn buttonPrimary" (click)="open(content,0)" >
+        + Add new
+    </button>
+  
+</div>
+<ng-template class="modalBox"  #content let-modal>
+  <div class="row " style="padding: 40px; width: 630px;">
+    <div>
+        <div (click)="changeColorIndex(0)"style="margin-bottom: 15px;">
+              <div class="sm-4 first last colorStrip shadow" [ngStyle]="
+              {'background-color': newTheme.colorConfig.active_color}">
+              </div>
+              <div>
+                Active color
+              </div>
+        </div>
+        <div  (click)="changeColorIndex(1)" style="margin-bottom: 15px;">
+              <div class="sm-4 first last colorStrip shadow" [ngStyle]="
+              {'background-color': newTheme.colorConfig.background_color}">
+              </div>
+              <div>
+                Background color
+              </div>
+       </div>
+       <div (click)="changeColorIndex(2)" style="margin-bottom: 15px;">
+              <div class="sm-4 first last colorStrip shadow" [ngStyle]="
+              {'background-color': newTheme.colorConfig.panel_color}">
+              </div>
+              <div>
+                Panel color
+              </div>
+      </div>
+      
+      <div (click)="changeColorIndex(3)" style="margin-bottom: 15px;">
+              <div class="sm-4 first last colorStrip shadow" [ngStyle]="
+              {'background-color':newTheme.colorConfig.primary_color}">
+              </div>
+              <div>
+                Primary color
+              </div>
+     </div>
+     <div (click)="changeColorIndex(4)" style="margin-bottom: 15px;">
+            <div class="sm-4 first last colorStrip shadow" [ngStyle]="
+            {'background-color':newTheme.colorConfig.text_color}">
+            </div>
+            <div>
+              Text color
+            </div>
+    </div>
+          
+    </div>
+    <div>
+      <div>
+        <div [ngStyle]="{'width':'250px','height':'250px','padding-left':'30px'}">
+          <color-sketch [(color)]="newTheme.colorConfig[colorStrip[activeColorStrip]]" (onChange)="changeComplete($event)"></color-sketch>
+          </div>
+      </div>
+    
+         
+
+        
+
+        
+
+      
+    </div>
+  </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('cancel click')">Cancel</button>
+    </div>
+  </ng-template>

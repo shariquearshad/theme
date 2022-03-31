@@ -1,0 +1,98 @@
+.tile{
+    width: 60px;
+    height: 15px;
+    border-right: 0.5px solid white;
+    text-align:center ;
+    
+}
+.colorContainer{
+    width: 420px;
+}
+.modalContainer{
+    justify-content: space-between;
+}
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+    display: inline-flex;
+}
+.title{
+    
+    font-weight: bolder;
+    margin-bottom: 25px ;
+    font-size: 20px;
+}
+.first{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.last{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.colorStrip{
+   width: 180px;
+   height: 36px;
+   cursor: pointer;
+   margin-bottom: 0px !important;
+}
+.container{
+    cursor: pointer;
+    margin-bottom: 8px;
+    padding: 5px 20px;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    align-content: space-between;
+    transition: 0.5s;
+    margin-inline-start: 0px;
+    width: 350px  !important;
+}
+.container:hover{
+    border:2px solid darkgray;
+    
+}
+.color-picker{
+    position: initial;
+}
+.myDiv{
+    align-content: flex-start  !important;
+    display: flex !important;
+}
+.myDiv:hover{
+    .hide{
+        display:block;
+    }
+}
+.active{
+    border:2px solid black;
+    text-shadow: darkgreen;
+
+}
+.name_container{
+    padding-left: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+}
+.modalBox{
+    
+    width: max-content
+}
+.colorPicker{
+    position: relative;
+}
+.modal-content{
+    width: max-content  !important;
+}
+.hide{
+    display: none;
+}
+.bi{
+    margin-right: 5px;
+}
+.buttonPrimary{
+    background-color: lightgray;
+    margin: 5px;
+    padding: 5px;
+}
+  

@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+// /* You can add global styles to this file, and also import other style files */
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+// /* Importing Bootstrap SCSS file. */
+// @import '~bootstrap/scss/bootstrap';
+:root{
+    --active : orange;
+    --background : whitesmoke;
+    --panel:white;
+    --text:black;
+    --primary:#ffb84a;
+    --preview-active:#ffb84a;
+    --preview-background:#e5e5e5;
+    --preview-panel:#fff;
+    --preview-text:black;
+    --preview-primary: #ffb84a;
+    --box-shadow :0.0625rem 0.0625rem 5px 1px  rgba(0,0,0,.15); 
+    --font-family :Calibri!important; 
+    // --box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+ }

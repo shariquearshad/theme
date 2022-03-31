@@ -1,0 +1,84 @@
+<div style="padding-right: 50px ;">
+    <div class="title">Theme Preview</div>
+    <div class="container shadow p-3 mb-5 bg-white rounded">
+        <header class="row contentRow" >
+            <div class="circle" >
+
+
+            </div>
+            <div class="navPannel home">Home</div>
+            <div class="navPannel">About</div>
+            <div class="navPannel">Contact us</div>
+            <div>
+
+            </div>
+        </header>
+        <div class="row headingContentRow">
+            <div class="topLeftHeading">
+                <h3>
+                    Heading 1
+                </h3>
+                <!-- <h6>
+                    Second line of subheading
+                </h6> -->
+                <div class="line" [ngStyle]="{'width': '300px'}">
+                </div>
+                <div class="line" [ngStyle]="{'width': '200px'}">
+                </div>
+                <div class="line" [ngStyle]="{'width': '400px'}">
+                </div>
+                <div class="line" [ngStyle]="{'width': '50px'}">
+                </div>
+
+
+
+            </div>
+            <div class="topRightHeading" [ngStyle]="{'background-color':panel_color}">
+                <h3>
+                    Heading 1
+                </h3>
+                <!-- <h6>
+                    Second line of subheading
+                </h6> -->
+                <div class="line" [ngStyle]="{'width': '50px'}">
+                </div>
+                <div class="line" [ngStyle]="{'width': '162px'}">
+                </div>
+                <div class="row">
+                    <div class="circleBorder" ></div>
+                    <div class="circleLine">
+                        <div class="line" [ngStyle]="{'width': '120px'}">
+                        </div>
+                        <div class="line" [ngStyle]="{'width': '80px'}">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomHeading" [ngStyle]="{'background-color':panel_color, 'color': text_color} ">
+            <h3>
+                Heading 2
+            </h3>
+            <!-- <h6>
+                Second line of subheading
+            </h6> -->
+            <div class="line" [ngStyle]="{'width': '600px','background-color':text_color}">
+            </div>
+            <div class="line" [ngStyle]="{'width': '400px','background-color':text_color}">
+            </div>
+            <div class="button previewButtonAlign">
+                <button class="btn secondary-btn  shadow p-3 mb-5 bg-white rounded"
+                    style="background-color: lightgray !important ;">Secondary</button>
+                <button class="btn primary-btn  shadow p-3 mb-5 bg-white rounded"
+                    style="background-color:primary_color!important;">primary</button>
+            </div>
+        </div>
+    </div>
+    <div class="button" style="text-align-last: end; ">
+        <button class="btn  secondary-btn shadow p-3 mb-5 bg-white rounded"
+            Style="background-color: lightgray !important">cancel</button>
+        <button class="btn  primary-btn shadow p-3 mb-5 bg-white rounded"
+            style="background-color:primary_color !important">Save & Apply</button>
+    </div>
+</div>

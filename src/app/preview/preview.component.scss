@@ -1,0 +1,87 @@
+.row{
+    margin: 0px;
+    padding: 5px;
+   
+}
+.circle{
+    border-radius: 50%;
+    padding: 5px;
+    background-color: var(--preview-background);
+    margin: 4px; width:30px;height: 30px;
+}
+.line{
+    margin-bottom:10px !important;height: 10px;
+    background-color: var(--preview-text);
+
+}
+.home{
+background-color: var(--preview-active);
+}
+.topLeftHeading{
+    padding: 10px;
+     margin : 5px;
+     background-color:var(--preview-panel);
+     
+
+}
+.topRightHeading{
+    padding:10px; margin:5px;
+
+}
+.headingContentRow{
+    padding: 20px !important;
+    display: flex;
+}
+.secondary-btn{
+    margin:5px !important; padding:4px !important;
+
+}
+.primary-btn{
+    margin:5px !important; padding:4px !important;
+    background-color: var(--preview-panel);
+    color: var(--text);
+
+}
+.previewButtonAlign{
+    text-align-last: end;
+
+}
+.bottomHeading{
+    padding:10px; margin:20px; margin-top:0px;
+
+}
+.contentRow{
+    padding: 0px; margin: 0px;
+    display: flex;
+    background-color: var(--preview-panel);
+    color: var(--preview-text);
+}
+.container{
+    padding: 0px !important;
+    background-color: var(--preview-background);
+}
+.circleLine{
+    align-self: flex-end;
+    margin-top: 8px;
+}
+.circleBorder{
+    width: 70px;
+    height: 70px;
+    color: var(--preview-active);
+    border: 10px solid;
+    border-right: 10px solid transparent !important;
+    border-radius: 50px;
+
+}
+.navPannel{
+    margin-left: 12px;
+    padding: 5px;
+}
+.title{
+    text-align: center;
+     padding-bottom: 0px;
+    
+    font-weight: bolder;
+    margin-bottom: 25px ;
+    font-size: 20px;
+}
